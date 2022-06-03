@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "css-reset-and-normalize": "^2.3.6"
+  },
+  "name": "task-table-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass src/scss/index.scss src/css/style.css"
+  },
+  "author": "Binh",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

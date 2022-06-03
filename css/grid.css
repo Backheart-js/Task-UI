@@ -1,0 +1,57 @@
+.grid {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.row.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.row.no-gutters .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.l-2-5,
+.l-3-5,
+.l-6 {
+  display: block;
+}
+
+.l-2-5 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(2.5/12*100%);
+          flex: 0 0 calc(2.5/12*100%);
+  max-width: calc(2.5/12*100%);
+}
+
+.l-3-5 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(3.5/12*100%);
+          flex: 0 0 calc(3.5/12*100%);
+  max-width: calc(3.5/12*100%);
+}
+
+.l-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
