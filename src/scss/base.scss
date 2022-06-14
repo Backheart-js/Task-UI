@@ -1,5 +1,6 @@
 $primary_color: #1a73e8;
 $background_color: #f1f3f4;
+$background_icon_hover_color: rgb(232, 231, 231);
 
 * {
     margin: 0;
@@ -81,6 +82,38 @@ html {
     color: #999c9f;
     font-size: 14px;
     font-weight: 600;
+}
+
+.dropdown__wrapper {
+    position: absolute;
+    background-color: #fff;
+    min-width: 13rem;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 10;
+
+    .dropdown__list {
+        list-style: none;
+
+        .dropdown__title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #666;
+
+        }
+
+        .dropdown__row {
+            font-size: 1.6rem;
+            padding: 6px 12px;
+            color: #83868a;
+
+            &:hover {
+                background-color: $background_icon_hover_color;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 input[type="checkbox"] {

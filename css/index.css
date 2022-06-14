@@ -101,6 +101,39 @@ html {
   font-weight: 600;
 }
 
+.dropdown__wrapper {
+  position: absolute;
+  background-color: #fff;
+  min-width: 13rem;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 10;
+}
+
+.dropdown__wrapper .dropdown__list {
+  list-style: none;
+}
+
+.dropdown__wrapper .dropdown__list .dropdown__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.dropdown__wrapper .dropdown__list .dropdown__row {
+  font-size: 1.6rem;
+  padding: 6px 12px;
+  color: #83868a;
+}
+
+.dropdown__wrapper .dropdown__list .dropdown__row:hover {
+  background-color: #e8e7e7;
+  cursor: pointer;
+}
+
 input[type="checkbox"] {
   -webkit-appearance: none;
   width: 2rem;
@@ -415,35 +448,75 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
   border-top-right-radius: 20px;
 }
 
-#table .table .table__heading .table__heading--left {
+.table__heading--left {
   width: 13rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-#table .table .table__heading .table__heanding--right .table__heading-text {
+.table__heanding--right .table__heading-text {
+  position: relative;
   width: 13rem;
+  height: 32px;
 }
 
-#table .table .table__heading .table__heanding--right .table__heading-text span {
+.table__heanding--right .table__heading-text .dropdown__wrapper {
+  top: 32px;
+  left: 0;
+  right: 0;
+}
+
+.table__heanding--right .table__heading-text span {
   font-size: 1.4rem;
   color: #333;
 }
 
-#table .table .table__heading .table__heanding--right .table__heading-page {
+.table__heanding--right .table__heading-text:hover {
+  background-color: #e8e7e7;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.table__heanding--right .table__heading-page {
+  position: relative;
   width: 13rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-#table .table .table__content .table__content-wrap {
+.table__heanding--right .table__heading-page span {
+  width: 32px;
+  height: 32px;
+}
+
+.table__heanding--right .table__heading-page span:hover {
+  cursor: pointer;
+  background-color: #e8e7e7;
+  border-radius: 50%;
+}
+
+.more-function {
+  position: relative;
+}
+
+.more-function .dropdown__wrapper {
+  right: 0;
+  top: 3.2rem;
+}
+
+.more-function .dropdown__wrapper .dropdown__title {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.table__content-wrap {
   overflow-y: scroll;
   max-height: 60rem;
 }
 
-#table .table .table__content .table__content-wrap .content-row {
+.table__content-wrap .content-row {
   height: 4.7rem;
   background-color: #f8f8f8;
   margin: 2px 2px 2px 0;
@@ -453,25 +526,41 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
   transition: all .3s ease-out;
 }
 
-#table .table .table__content .table__content-wrap .content-row .table__content-col1,
-#table .table .table__content .table__content-wrap .content-row .table__content-col2,
-#table .table .table__content .table__content-wrap .content-row .table__content-col3 {
+.table__content-wrap .content-row .table__content-col1,
+.table__content-wrap .content-row .table__content-col2,
+.table__content-wrap .content-row .table__content-col3 {
   border-right: 2px solid #f1f3f4;
   height: 100%;
 }
 
-#table .table .table__content .table__content-wrap .content-row .star-icon:hover {
+.table__content-wrap .content-row .star-icon:hover {
   border-radius: 50%;
   background-color: rgba(153, 153, 153, 0.1);
 }
 
-#table .table .table__content .table__content-wrap .content-row .star-icon.active {
+.table__content-wrap .content-row .star-icon.active {
   color: #f7cb4d;
 }
 
-#table .table .table__content .table__content-wrap .content-row:hover {
+.table__content-wrap .content-row:hover {
   cursor: pointer;
   border: 1px solid rgba(153, 153, 153, 0.4);
+}
+
+.icon-dropdown {
+  position: relative;
+}
+
+.icon-dropdown .dropdown__wrapper {
+  width: 18rem;
+  left: 0;
+  top: 3.2rem;
+}
+
+.icon-dropdown:hover {
+  cursor: pointer;
+  background-color: #e8e7e7;
+  border-radius: 4px;
 }
 
 .table__content-function {
