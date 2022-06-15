@@ -85,6 +85,7 @@ html {
 }
 
 .dropdown__wrapper {
+    display: none;
     position: absolute;
     background-color: #fff;
     min-width: 13rem;
@@ -157,3 +158,4 @@ input[type="checkbox"] {
         border-color: rgb(140, 140, 140);
     }
 }
+

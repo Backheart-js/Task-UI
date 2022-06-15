@@ -101,6 +101,7 @@ html {
 }
 
 .dropdown__wrapper {
+  display: none;
   position: absolute;
   background-color: #fff;
   min-width: 13rem;
