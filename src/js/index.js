@@ -5,6 +5,7 @@ const tabs = $$('.category__function-item');
 const panel = $$('.panel__wrapper');
 const stars = $$('.star-icon');
 const labels = $$('.label-icon');
+const dropdown_icon = $('.icon-dropdown');
 const dropdown = $('.dropdown-checkbox');
 const line_display = $$('.line-display-wrapper');
 
@@ -47,6 +48,7 @@ const page = {
         dropdown.addEventListener('click', function (e) {
             e.stopPropagation();
         })
+        dropdown_icon.addEventListener('click', this.dropdownFunc);
         window.onclick = function (e) {
             if (!e.target.matches('.icon-dropdown')) {
                 const dropdownContain = $(".dropdown-checkbox");
@@ -67,8 +69,6 @@ const page = {
 
     start: function () {
         this.handleEvent();
-
-        this.dropdownFunc();
 
         this.handleFuncTable(stars);
         this.handleFuncTable(labels);
