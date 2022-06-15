@@ -21,10 +21,14 @@ $row_height: 4.7rem;
 
 #content {
     flex: 3;
+
+    &.hide-sidebar {
+        flex: 10;
+}
 }
 
 #category {
-    width: 8.5rem;
+    width: 7.2rem;
     display: flex;
     flex-direction: column;
     border-right: #d5d6d6 solid 1px;
@@ -34,6 +38,10 @@ $row_height: 4.7rem;
         .category__menu-wrap {
             padding: 24px;
             text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -192,6 +200,8 @@ $row_height: 4.7rem;
     .toolbar__settings {
         display: flex;
         flex: 1;
+        justify-content: end;
+        margin-right: 2.2rem;
 
         .toolbar__settings-wrap {
             display: flex;
@@ -395,4 +405,8 @@ $row_height: 4.7rem;
 
 .active-block {
     display: block;
+}
+
+.active-hidden {
+    display: none;
 }

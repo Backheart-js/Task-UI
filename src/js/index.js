@@ -2,12 +2,15 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const tabs = $$('.category__function-item');
+const menu_btn = $('.category__menu-wrap');
+const content = $('#content');
 const panel = $$('.panel__wrapper');
 const stars = $$('.star-icon');
 const labels = $$('.label-icon');
 const dropdown_icon = $('.icon-dropdown');
 const dropdown = $('.dropdown-checkbox');
 const line_display = $$('.line-display-wrapper');
+let sidebarActive = true;
 
 
 const page = {
@@ -33,6 +36,13 @@ const page = {
     },
 
     handleEvent: function () {
+        //handle toggle sidebar
+        menu_btn.addEventListener('click', function () {
+            $('#panel').classList.toggle('active-hidden', sidebarActive);
+            content.classList.toggle('hide-sidebar',sidebarActive);
+            sidebarActive = !sidebarActive;
+        }),
+
         // handle Tab category
         tabs.forEach((tab, index) => {
             tab.addEventListener('click', function (e) {

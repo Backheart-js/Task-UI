@@ -203,8 +203,14 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
           flex: 3;
 }
 
+#content.hide-sidebar {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
 #category {
-  width: 8.5rem;
+  width: 7.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,6 +224,10 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
 #category .category__menu .category__menu-wrap {
   padding: 24px;
   text-align: center;
+}
+
+#category .category__menu .category__menu-wrap:hover {
+  cursor: pointer;
 }
 
 #category .category__function .category__function-list {
@@ -409,6 +419,10 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: 2.2rem;
 }
 
 #toolbar .toolbar__settings .toolbar__settings-wrap {
@@ -628,4 +642,8 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
 
 .active-block {
   display: block;
+}
+
+.active-hidden {
+  display: none;
 }
