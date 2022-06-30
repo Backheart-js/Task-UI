@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 
 <body>
@@ -86,7 +87,7 @@
                 </div>
                 <div class="panel__wrapper active">
                     <div class="panel__create">
-                        <button class="panel__create-btn btn btn-white">
+                        <button title="addPost" class="open-modal panel__create-btn btn btn-white">
                             <span class="icon material-icons-sharp" style="margin-right: 12px;">
                                 edit
                             </span>
@@ -125,6 +126,14 @@
                             <p class="paner__option-tag">Cần phê duyệt</p>
                         </li>
                     </ul>
+                    <div class="panel__label-wrapper flex-center-y">
+                        <p class="label-text">NHÃN</p>
+                        <button title="addLabel" class="open-modal label-add-wrapper">
+                            <span title="addLabel" class="label-add-icon icon material-icons">
+                                add
+                            </span>
+                        </button>
+                    </div>
                 </div>
                 <div class="panel__wrapper">
 
@@ -987,7 +996,14 @@
             </div>
         </div>
     </div>
-    <script src="./src/js/index.js"></script>
+
+    <div id="modal" class="hidden">
+        <div class="modal-container">
+
+        </div>
+    </div>
+    <script type="module" src="./src/js/index.js"></script>
+    <script src="./src/js/modal.js"></script>
 </body>
 
 </html>

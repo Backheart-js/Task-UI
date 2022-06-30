@@ -1,3 +1,5 @@
+import addElementIntoModal from "./modal.js";
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -10,6 +12,9 @@ const labels = $$('.label-icon');
 const dropdown_icon = $('.icon-dropdown');
 const dropdown = $('.dropdown-checkbox');
 const line_display = $$('.line-display-wrapper');
+const openModals = $$('.open-modal');
+const modal = $('#modal');
+const modalContent = $('.modal-container');
 let sidebarActive = true;
 
 
@@ -74,6 +79,24 @@ const page = {
                 $('.line-display-wrapper.active').classList.remove('active');
                 this.classList.add('active');
             })
+        })
+
+        //handle modal
+        openModals.forEach((openModal, index) => {
+            openModal.addEventListener('click', function (e) {
+                console.log(e.target.title);
+                addElementIntoModal(e.target.title);
+                modal.classList.add('flex-center');
+                modal.classList.remove('hidden');
+            })
+        })
+
+        modalContent.addEventListener('click', function (e) {
+            e.stopPropagation();
+        })
+        modal.addEventListener('click', function (e) {
+            modal.classList.remove('flex-center');
+            modal.classList.add('hidden');
         })
     },
 

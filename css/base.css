@@ -40,6 +40,10 @@ html {
   color: #5f6368;
 }
 
+.hidden {
+  display: none;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;

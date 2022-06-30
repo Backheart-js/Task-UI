@@ -311,11 +311,42 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
 
 #panel .panel__wrapper .panel__options-list .paner__options-item:hover {
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #e8e7e7;
+}
+
+#panel .panel__wrapper .panel__label-wrapper {
+  padding: 8px 18px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 86px;
 }
 
 #panel .panel__wrapper.active {
   display: block;
+}
+
+.panel__option-tag {
+  color: #666;
+}
+
+.label-text {
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.label-add-wrapper {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.label-add-wrapper .label-add-icon {
+  font-size: 2.8rem;
+}
+
+.label-add-wrapper:hover {
+  background-color: #e8e7e7;
 }
 
 .category__function-item {

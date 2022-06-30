@@ -124,15 +124,43 @@ $row_height: 4.7rem;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: #ccc;
+                    background-color: #e8e7e7;
                 }
             }
 
         }
 
+        .panel__label-wrapper {
+            padding: 8px 18px;
+            justify-content: space-between;
+            margin-top: 86px;
+        }
+
         &.active {
             display: block;
         }
+    }
+}
+
+.panel__option-tag {
+    color: #666;
+}
+
+.label-text {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: 400;
+}
+.label-add-wrapper {
+    border-radius: 50%;
+    cursor: pointer;
+
+    .label-add-icon {
+        font-size: 2.8rem;
+    }
+
+    &:hover {
+        background-color: #e8e7e7;
     }
 }
 
