@@ -29,10 +29,18 @@ html {
     }
 }
 
-.btn-white {
+.btn-create-white {
     background-color: #fff;
     color: $primary_color;
     font-size: 14px;
+
+    span {
+        color: $primary_color;
+    }
+
+    &:hover {
+        background-color: $background_icon_hover_color;
+    }
 }
 
 .icon {
@@ -66,8 +74,15 @@ html {
 .h-full {
     height: 100%;
 }
+.w-full {
+    width: 100%;
+}
 
-// 
+//
+// .table {
+//     display: none;
+// }
+
 .table__icon-wrap {
     height: 100%;
     width: 40px;

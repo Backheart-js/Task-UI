@@ -1,12 +1,128 @@
+@import "./base.scss";
+$colors: #FF69B4, #E6E6FA, #663399, #FF0000, #FFA500, #FFFF00,#BDB76B, #008000, #00FFFF, #0000FF, #000;
+
 #modal {
     position: fixed;
     top: 0;left: 0;right: 0;bottom: 0;
     background-color: rgba($color: #000000, $alpha: .15);
 
     .modal-container {
+        position: relative;
         min-width: 600px;
         min-height: 400px;
+        padding: 32px 32px 36px 32px;
         background-color: #fff;
         border-radius: 10px;
     }
 }
+
+.color-choose-wrapper {
+    // display: flex;
+    // width: 80%;
+    // margin: 0 auto;
+    // flex-wrap: wrap;
+}
+
+.color-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.color-choose {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 16px;
+    margin-bottom: 12px;
+
+    .color-choose-icon {
+        position: absolute;
+        color: #fff;
+        font-size: 3.4rem;
+        user-select: none;
+    }
+}
+
+.modal-title {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 28px;
+        font-weight: 400;
+        color: #666;
+        user-select: none;
+    }
+
+    .modal-close-btn {
+        padding: 4px;
+        border-radius: 50%;
+
+        span {
+            font-size: 2.8rem;
+            user-select: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #e8e7e7;
+        }
+    }
+}
+
+.modal-footer {
+    position: absolute;
+    display: flex;
+    bottom: 36px;
+    right: 32px;
+}
+
+.btn-white {
+    display: flex;
+    width: 75px;
+    color: #666;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    margin-right: 16px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 1.95px 1.95px 2.6px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #e8e7e7;
+        box-shadow: none;
+    }
+}
+.btn-primary {
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: $primary_color;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 1.95px 1.95px 2.6px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .9;
+        box-shadow: none;
+    }
+}
+
+$i: 0;
+@each $color in $colors {
+    $i: $i+1;
+
+    .color-#{$i} {
+      background-color: $color;
+    }
+  }

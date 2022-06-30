@@ -37,7 +37,15 @@
     flex: 0 0 calc(3.5/12*100%);
     max-width: calc(3.5/12*100%);
 }
+.l-4 {
+    flex: 0 0 calc(4/12*100%);
+    max-width: calc(4/12*100%);
+}
 .l-6 {
     flex: 0 0 50%;
     max-width: 50%;
+}
+.l-8 {
+    flex: 0 0 calc(8/12*100%);
+    max-width: calc(8/12*100%);
 }

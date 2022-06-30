@@ -87,7 +87,7 @@
                 </div>
                 <div class="panel__wrapper active">
                     <div class="panel__create">
-                        <button title="addPost" class="open-modal panel__create-btn btn btn-white">
+                        <button class="panel__create-btn btn btn-create-white">
                             <span class="icon material-icons-sharp" style="margin-right: 12px;">
                                 edit
                             </span>
@@ -186,7 +186,43 @@
                 </div>
             </div>
             <div id="table">
-                <div class="table">
+                <div class="table table-create-doc">
+                    <div class="table-create-header flex-center-y">
+                        <div class="back-wrapper">
+                            <span class="icon material-icons">
+                                arrow_back
+                            </span>
+                        </div>
+                        <h3 class="">Tạo tài liệu trình ký mới</h3>
+                    </div>
+                    <div class="table-create-content grid">
+                        <div class="doc-row row h-full">
+                            <div class="document-wrapper l-8 ">
+                                <div class="document w-full h-full">
+                                    
+                                </div>
+                            </div>
+                            <div class="document-func-wrapper l-4 h-full">
+                                <div class="document-func-member w-full">
+
+                                </div>
+                                <div class="document-func-desc w-full">
+
+                                </div>
+                                <div class="document-func-file w-full">
+
+                                </div>
+                                <div class="document-func-btn w-full">
+                                    <button class="btn-close-doc">Hủy</button>
+                                    <button class="btn-save-doc">Lưu</button>
+                                    <button class="btn-create-doc">Tạo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table table-all-doc">
                     <div class="table__heading flex-center-y">
                         <div class="table__heading--left flex-center-y">
                             <div class="flex-center-y">
@@ -995,6 +1031,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
     <div id="modal" class="hidden">
@@ -1003,7 +1040,6 @@
         </div>
     </div>
     <script type="module" src="./src/js/index.js"></script>
-    <script src="./src/js/modal.js"></script>
 </body>
 
 </html>

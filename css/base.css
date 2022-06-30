@@ -30,10 +30,18 @@ html {
   cursor: pointer;
 }
 
-.btn-white {
+.btn-create-white {
   background-color: #fff;
   color: #1a73e8;
   font-size: 14px;
+}
+
+.btn-create-white span {
+  color: #1a73e8;
+}
+
+.btn-create-white:hover {
+  background-color: #e8e7e7;
 }
 
 .icon {
@@ -82,6 +90,10 @@ html {
 
 .h-full {
   height: 100%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .table__icon-wrap {
