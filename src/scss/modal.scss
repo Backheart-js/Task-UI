@@ -1,5 +1,5 @@
 @import "./base.scss";
-$colors: #FF69B4, #E6E6FA, #663399, #FF0000, #FFA500, #FFFF00,#BDB76B, #008000, #00FFFF, #0000FF, #000;
+@import "./colorLabel.scss";
 
 #modal {
     position: fixed;
@@ -9,10 +9,34 @@ $colors: #FF69B4, #E6E6FA, #663399, #FF0000, #FFA500, #FFFF00,#BDB76B, #008000, 
     .modal-container {
         position: relative;
         min-width: 600px;
-        min-height: 400px;
-        padding: 32px 32px 36px 32px;
+        max-width: 650px;
+        min-height: 450px;
+        padding: 32px 40px 36px 32px;
         background-color: #fff;
         border-radius: 10px;
+    }
+}
+
+.modal-body {
+    margin-top: 16px;
+
+    .label-text {
+        font-size: 1.6rem;
+        color: #666;
+    }
+    .label-input {
+        padding: 10px 8px;
+        width: 100%;
+        font-size: 1.6rem;
+        color: #666;
+        font-weight: 400;
+        margin: 12px 0;
+        border: 1px solid #999;
+        border-radius: 2px;
+
+        &:focus {
+            border-color: #999;
+        }
     }
 }
 
@@ -25,25 +49,47 @@ $colors: #FF69B4, #E6E6FA, #663399, #FF0000, #FFA500, #FFFF00,#BDB76B, #008000, 
 
 .color-container {
     display: flex;
-    width: 80%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 8px 0;
+    margin-left: auto;
     flex-wrap: wrap;
+    justify-content: end;
 }
 
 .color-choose {
     position: relative;
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
     border-radius: 50%;
     cursor: pointer;
-    margin-right: 16px;
+    margin-left: 16px;
     margin-bottom: 12px;
 
+    &.color-active {
+        .color-choose-icon {
+            display: block;
+        }
+    }
+
     .color-choose-icon {
+        display: none;
         position: absolute;
         color: #fff;
         font-size: 3.4rem;
         user-select: none;
+    }
+}
+
+.delete-color {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #e8e7e7;
     }
 }
 
@@ -72,6 +118,25 @@ $colors: #FF69B4, #E6E6FA, #663399, #FF0000, #FFA500, #FFFF00,#BDB76B, #008000, 
             background-color: #e8e7e7;
         }
     }
+}
+
+.modal__search {
+    position: relative;
+
+    .modal__icon-wrapper {
+        position: absolute;
+        height: 100%;
+        width: 60px;
+    }
+}
+.modal__icon {
+
+}
+.modal__search-input {
+    font-size: 1.6rem;
+    padding: 12px 16px 12px 60px;
+    border-radius: 10px;
+    background-color: #e8eaed;
 }
 
 .modal-footer {

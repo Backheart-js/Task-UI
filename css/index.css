@@ -49,6 +49,10 @@ html {
   color: #5f6368;
 }
 
+.block {
+  display: block;
+}
+
 .hidden {
   display: none;
 }
@@ -332,15 +336,70 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
 }
 
 #panel .panel__wrapper .panel__label-wrapper {
-  padding: 8px 18px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 86px;
+  padding: 0px 12px;
+  margin-top: 100px;
 }
 
 #panel .panel__wrapper.active {
   display: block;
+}
+
+.label__title-wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 6px;
+  margin-bottom: 20px;
+}
+
+.label__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.label__list .label-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4px 6px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.label__list .label-item:hover {
+  background-color: #e8e7e7;
+}
+
+.label__list .label-item:hover .label__more-icon {
+  display: block;
+}
+
+.label__item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.label__item-info .label__icon {
+  margin-right: 8px;
+}
+
+.label__item-info .label__content {
+  font-size: 1.6rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.label__more-icon {
+  display: none;
+  cursor: pointer;
 }
 
 .panel__option-tag {
@@ -364,6 +423,61 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
 
 .label-add-wrapper:hover {
   background-color: #e8e7e7;
+}
+
+.label-1 {
+  color: #FF69B4;
+  opacity: 0.9;
+}
+
+.label-2 {
+  color: #E6E6FA;
+  opacity: 0.9;
+}
+
+.label-3 {
+  color: #663399;
+  opacity: 0.9;
+}
+
+.label-4 {
+  color: #FF0000;
+  opacity: 0.9;
+}
+
+.label-5 {
+  color: #FFA500;
+  opacity: 0.9;
+}
+
+.label-6 {
+  color: #FFFF00;
+  opacity: 0.9;
+}
+
+.label-7 {
+  color: #BDB76B;
+  opacity: 0.9;
+}
+
+.label-8 {
+  color: #008000;
+  opacity: 0.9;
+}
+
+.label-9 {
+  color: #00FFFF;
+  opacity: 0.9;
+}
+
+.label-10 {
+  color: #0000FF;
+  opacity: 0.9;
+}
+
+.label-11 {
+  color: #000;
+  opacity: 0.9;
 }
 
 .category__function-item {
@@ -562,20 +676,137 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
           box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 }
 
+.func-title {
+  font-size: 1.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
 .document-func-member {
   height: calc(5/12*100%);
+  padding: 16px 0 16px 20px;
   border-radius: 20px;
   -webkit-box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
   margin-bottom: 8px;
 }
 
+.document-func-member .func__member-btn {
+  color: #666;
+  font-style: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  width: 90%;
+  background-color: transparent;
+  border: 2px solid silver;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.document-func-member .func__member-btn span {
+  margin-right: 8px;
+}
+
+.document-func-member .func__member-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.member__list-wrapper {
+  overflow-y: scroll;
+  height: calc(100% - (84px+57px));
+}
+
+.func__member-list {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+.func__member-list .func__member-item {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 8px 0;
+  margin-bottom: 1px;
+  background-color: #f1f3f4;
+  border-radius: 4px;
+}
+
+.func__member-name {
+  font-size: 15px;
+  color: #666;
+}
+
+.func__member-quantity {
+  font-size: 15px;
+  color: #666;
+  width: 20px;
+  text-align: center;
+}
+
+.func__member-select {
+  font-size: 15px;
+  color: #666;
+  background-color: transparent;
+}
+
+.func__member-option {
+  text-align: center;
+  background-color: #f1f3f4;
+}
+
+.func__member-option:hover {
+  background-color: #f1f3f4;
+}
+
 .document-func-desc {
+  position: relative;
   height: calc(3/12*100%);
   border-radius: 20px;
   -webkit-box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
   margin: 8px 0;
+}
+
+.document-func-desc .textarea-wrapper {
+  position: absolute;
+  height: 95px;
+  width: 91%;
+  bottom: 20px;
+  right: 0px;
+  border: 2px solid #999;
+  border-radius: 2px;
+  overflow-y: scroll;
+}
+
+.document-func-desc .textarea-wrapper .textarea-desc {
+  padding: 8px 0 0 6px;
+  border-style: none;
+  border-color: Transparent;
+}
+
+.document-func-desc .textarea-wrapper .textarea-desc::-webkit-input-placeholder {
+  color: #666;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.document-func-desc .textarea-wrapper .textarea-desc:-ms-input-placeholder {
+  color: #666;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.document-func-desc .textarea-wrapper .textarea-desc::-ms-input-placeholder {
+  color: #666;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.document-func-desc .textarea-wrapper .textarea-desc::placeholder {
+  color: #666;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .document-func-file {
@@ -584,6 +815,22 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
   -webkit-box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
   margin: 8px 0;
+}
+
+.document-func-file .func__file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.document-func-file .func__file-label {
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .document-func-btn {

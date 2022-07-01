@@ -126,13 +126,18 @@
                             <p class="paner__option-tag">Cần phê duyệt</p>
                         </li>
                     </ul>
-                    <div class="panel__label-wrapper flex-center-y">
-                        <p class="label-text">NHÃN</p>
-                        <button title="addLabel" class="open-modal label-add-wrapper">
-                            <span title="addLabel" class="label-add-icon icon material-icons">
-                                add
-                            </span>
-                        </button>
+                    <div class="panel__label-wrapper">
+                        <div class="label__title-wrapper flex-center-y">
+                            <p class="label-text">NHÃN</p>
+                            <button title="addLabel" class="open-modal label-add-wrapper">
+                                <span title="addLabel" class="label-add-icon icon material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <ul class="label__list">
+                            
+                        </ul>
                     </div>
                 </div>
                 <div class="panel__wrapper">
@@ -199,18 +204,58 @@
                         <div class="doc-row row h-full">
                             <div class="document-wrapper l-8 ">
                                 <div class="document w-full h-full">
-                                    
+                                    <div class="document__header">
+                                        <h4 class="document__header-text">
+                                            Subject
+                                        </h4>
+                                    </div>
                                 </div>
                             </div>
                             <div class="document-func-wrapper l-4 h-full">
                                 <div class="document-func-member w-full">
-
+                                    <h4 class="func-title">
+                                        Người tham gia
+                                    </h4>
+                                    <button title="addMem" class="open-modal func__member-btn flex-center">
+                                        <span class="material-icons">
+                                            person_add_alt_1
+                                        </span>
+                                        Thêm người duyệt
+                                    </button>
+                                    <div class="member__list-wrapper">
+                                        <ul class="func__member-list">
+                                            <li class="func__member-item flex-center-y">
+                                                <span class="func__member-name">Nguyễn Vân A</span>
+                                                <span class="func__member-quantity">1</span>
+                                                <select name="" id="" class="func__member-select">
+                                                    <option value="duyet" class="func__member-option">Duyệt</option>
+                                                    <option value="ky" class="func__member-option">Ký</option>
+                                                    <option value="xem" class="func__member-option">Xem</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="document-func-desc w-full">
-
+                                    <h4 class="func-title">
+                                        Nội dung mô tả
+                                    </h4>
+                                    <div class="textarea-wrapper">
+                                        <textarea class="textarea-desc" name="" id="" cols="35" rows="30" placeholder="Nhập mô tả..."></textarea>
+                                    </div>
                                 </div>
                                 <div class="document-func-file w-full">
-
+                                    <h4 class="func-title">
+                                        Tài liệu đính kèm
+                                    </h4>
+                                    <input type="file" id="file"  name="file" class="func__file-input">
+                                    <label class="func__file-label" for="file">
+                                        <span class="material-icons">
+                                            file_upload
+                                        </span>
+                                        Tải file lên
+                                    </label>
+                                    
                                 </div>
                                 <div class="document-func-btn w-full">
                                     <button class="btn-close-doc">Hủy</button>

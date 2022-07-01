@@ -1,4 +1,5 @@
 import addElementIntoModal from "./modal.js";
+import Add from "./AddFromModal.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -15,7 +16,11 @@ const line_display = $$('.line-display-wrapper');
 const openModals = $$('.open-modal');
 const modal = $('#modal');
 const modalContent = $('.modal-container');
+let data = {
+    value: "",
+}
 let sidebarActive = true;
+let colorIsActive = false;
 
 
 const page = {
@@ -40,7 +45,13 @@ const page = {
         dropdown.classList.toggle('active-block');
     },
 
+    closeModal: function () {
+        modal.classList.remove('flex-center');
+        modal.classList.add('hidden');
+    },
+
     handleEvent: function () {
+        const _this = this;
         //handle toggle sidebar
         menu_btn.addEventListener('click', function () {
             $('#panel').classList.toggle('active-hidden', sidebarActive);
@@ -84,7 +95,6 @@ const page = {
         //handle modal
         openModals.forEach((openModal, index) => {
             openModal.addEventListener('click', function (e) {
-                console.log(e.target.title);
                 addElementIntoModal(e.target.title);
                 modal.classList.add('flex-center');
                 modal.classList.remove('hidden');
@@ -94,9 +104,28 @@ const page = {
         modalContent.addEventListener('click', function (e) {
             e.stopPropagation();
         })
-        modal.addEventListener('click', function (e) {
-            modal.classList.remove('flex-center');
-            modal.classList.add('hidden');
+        modal.addEventListener('click', this.closeModal)
+        modalContent.addEventListener('click', function(e) {
+            if (e.target.closest('.color-choose')) {
+                $('.color-choose.color-active').classList.remove('color-active');
+                e.target.classList.add('color-active');
+            }
+            else if (e.target.closest('.close-modal')) {
+                _this.closeModal();
+            }
+            else if (e.target.closest('.add-btn')) {
+                let value = $('.label-input').value;
+                let idColor = $('.color-choose.color-active').getAttribute('id-color') || "";
+                let idMember = $('.color-choose.color-activ') || "";
+                data = {
+                    value,
+                    idColor,
+                    idMember
+                }
+                alert('Thêm nhãn thành công');
+                Add(data);
+                $('.label-input').value = "";
+            }
         })
     },
 

@@ -48,6 +48,10 @@ html {
   color: #5f6368;
 }
 
+.block {
+  display: block;
+}
+
 .hidden {
   display: none;
 }
