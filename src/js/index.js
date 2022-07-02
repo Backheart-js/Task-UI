@@ -16,6 +16,7 @@ const line_display = $$('.line-display-wrapper');
 const openModals = $$('.open-modal');
 const modal = $('#modal');
 const modalContent = $('.modal-container');
+const labelList = $('.label__list');
 let data = {
     value: "",
 }
@@ -48,6 +49,10 @@ const page = {
     closeModal: function () {
         modal.classList.remove('flex-center');
         modal.classList.add('hidden');
+    },
+
+    stopPropagationFunc: function (e) {
+        e.stopPropagation();
     },
 
     handleEvent: function () {
@@ -101,9 +106,7 @@ const page = {
             })
         })
 
-        modalContent.addEventListener('click', function (e) {
-            e.stopPropagation();
-        })
+        modalContent.addEventListener('click', this.stopPropagationFunc)
         modal.addEventListener('click', this.closeModal)
         modalContent.addEventListener('click', function(e) {
             if (e.target.closest('.color-choose')) {
@@ -122,9 +125,27 @@ const page = {
                     idColor,
                     idMember
                 }
-                alert('Thêm nhãn thành công');
                 Add(data);
                 $('.label-input').value = "";
+            }
+            else if (e.target.closest('.group-title-wrapper')) {
+                e.target.closest('.modal__member-group').classList.toggle('active');
+            }
+        })
+        labelList.addEventListener('click', function (e) {
+            if (e.target.closest('.label__more-icon')) {
+                $('.dropdown__label-wrapper').classList.toggle('active-block');
+                $('.dropdown__label-wrapper').addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+                window.onclick = function (e) {
+                    if (!e.target.matches('.label__more-icon')) {
+                        const dropdownContain = $(".dropdown__label-wrapper");
+                        if (dropdownContain.classList.contains('active-block')) {
+                            dropdownContain.classList.remove('active-block');
+                        }
+                    }
+                }
             }
         })
     },

@@ -1,4 +1,4 @@
-import { colors } from './color.js';
+import { colors, members } from './Data.js';
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -45,6 +45,86 @@ function addElementIntoModal( type ) {
                 <span class="w-full">
                     <input type="text" class="modal__search-input w-full" placeholder="Nhập để tìm kiếm...">
                 </span>
+            </div>
+            <div class="modal__options">
+                <div class="modal__member-group">
+                    <div class="group-title-wrapper flex-center-y">
+                        <span class="material-icons member-icon">
+                            arrow_right
+                        </span>
+                        Ban Giám đốc
+                    </div>
+                    <ul class="members-list">
+                        <li class="members-item flex-center-y">
+                            <input type="checkbox">
+                            <div class="member-info grid flex-center-y">
+                                <p class="info-1">Nguyễn Vân Anh</p>
+                                <p class="info-2">AnhNV</p>
+                                <p class="info-3">Trưởng phòng</p>
+                            </div>
+                        </li>
+                        <li class="members-item flex-center-y">
+                            <input type="checkbox">
+                            <div class="member-info grid flex-center-y">
+                                <p class="info-1">Nguyễn Vân Hoàngg</p>
+                                <p class="info-2">AnhNV</p>
+                                <p class="info-3">Trưởng phòng</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal__member-group">
+                    <div class="group-title-wrapper flex-center-y">
+                        <span class="material-icons member-icon">
+                            arrow_right
+                        </span>
+                        Hành chính nhân sự
+                    </div>
+                    <ul class="members-list">
+                        <li class="members-item flex-center-y">
+                            <input type="checkbox">
+                            <div class="member-info grid flex-center-y">
+                                <p class="info-1">Nguyễn Vân Anh</p>
+                                <p class="info-2">AnhNV</p>
+                                <p class="info-3">Trưởng phòng</p>
+                            </div>
+                        </li>
+                        <li class="members-item flex-center-y">
+                            <input type="checkbox">
+                            <div class="member-info grid flex-center-y">
+                                <p class="info-1">Nguyễn Vân Hoàngg</p>
+                                <p class="info-2">AnhNV</p>
+                                <p class="info-3">Trưởng phòng</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal__member-group active">
+                    <div class="group-title-wrapper flex-center-y">
+                        <span class="material-icons member-icon">
+                            arrow_right
+                        </span>
+                        Kế toán
+                    </div>
+                    <ul class="members-list">
+                        <li class="members-item flex-center-y">
+                            <input type="checkbox">
+                            <div class="member-info grid flex-center-y">
+                                <p class="info-1">Nguyễn Vân Anh</p>
+                                <p class="info-2">AnhNV</p>
+                                <p class="info-3">Trưởng phòng</p>
+                            </div>
+                        </li>
+                        <li class="members-item flex-center-y">
+                            <input type="checkbox">
+                            <div class="member-info grid flex-center-y">
+                                <p class="info-1">Nguyễn Vân Hoàngg</p>
+                                <p class="info-2">AnhNV</p>
+                                <p class="info-3">Trưởng phòng</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         `;
     }

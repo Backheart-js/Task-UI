@@ -55,3 +55,42 @@ export const colors = [
         code: '#000'
     },
 ]
+
+export const members = [
+    {
+        id: 1,
+        name: 'Nguyễn Vân Anh',
+        department: 'Ban giám đốc',
+        office: 'Giám đốc'
+    },
+    {
+        id: 2,
+        name: 'Trần Vân Anh',
+        department: 'Ban giám đốc',
+        office: 'Phó giám đốc'
+    },
+    {
+        id: 3,
+        name: 'Nguyễn Vân Anh',
+        department: 'Hành chính nhân sự',
+        office: 'Trưởng phòng'
+    },
+    {
+        id: 4,
+        name: 'Trần Vân Anh',
+        department: 'Hành chính nhân sự',
+        office: 'Phó phòng'
+    },
+    {
+        id: 5,
+        name: 'Trần Vân Anh',
+        department: 'Kế toán',
+        office: 'Kế toán trưởng'
+    },
+    {
+        id: 6,
+        name: 'Trần Vân Anh',
+        department: 'Kế toán',
+        office: 'Kế toán'
+    },
+]

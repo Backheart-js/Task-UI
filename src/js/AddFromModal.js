@@ -1,4 +1,4 @@
-import { colors } from "./color.js";
+import { colors, members } from "./Data.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -6,7 +6,6 @@ const $$ = document.querySelectorAll.bind(document);
 const label_list = $('.label__list');
 
 function Add(data) {
-    console.log(data);
     let li = document.createElement('li');
     if (data.id !== "") {
         li.innerHTML = `
@@ -16,9 +15,17 @@ function Add(data) {
                 </span>
                 <p class="label__content">${data.value}</p>
             </div>
-            <span class="label__more-icon icon material-icons">
-                more_vert
-            </span>
+            <div class="label__more-wrapper">
+                <span class="label__more-icon open-dropdown icon material-icons">
+                    more_vert
+                </span>
+                <div class="dropdown__wrapper dropdown__label-wrapper">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__row">Sửa</li>
+                        <li class="dropdown__row">Xóa</li>
+                    </ul>
+                </div>
+            </div>
         `
         li.setAttribute('class', 'label-item', 'flex-center-y');
     }

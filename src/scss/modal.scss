@@ -8,9 +8,9 @@
 
     .modal-container {
         position: relative;
-        min-width: 600px;
-        max-width: 650px;
-        min-height: 450px;
+        min-width: 650px;
+        max-width: 680px;
+        min-height: 470px;
         padding: 32px 40px 36px 32px;
         background-color: #fff;
         border-radius: 10px;
@@ -122,6 +122,7 @@
 
 .modal__search {
     position: relative;
+    margin-bottom: 16px;
 
     .modal__icon-wrapper {
         position: absolute;
@@ -129,14 +130,114 @@
         width: 60px;
     }
 }
-.modal__icon {
 
-}
 .modal__search-input {
     font-size: 1.6rem;
     padding: 12px 16px 12px 60px;
     border-radius: 10px;
     background-color: #e8eaed;
+}
+
+$max-height-option: 220px;
+.modal__options {
+    max-height: $max-height-option;
+    padding: 8px 16px;
+    overflow-y: scroll;
+}
+.modal__options::-webkit-scrollbar {
+    width: 6px;
+}
+.modal__options::-webkit-scrollbar-track {
+    background-color: #e8eaed;
+    border-radius: 10px;
+}
+.modal__options::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px #666;
+    border-radius: 10px;
+}
+
+.modal__member-group {
+    user-select: none;
+
+    .group-title-wrapper {
+        font-size: 2rem;
+        color: #666;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .group-title-wrapper.active {
+        margin-bottom: 12px;
+    }
+
+    + .modal__member-group {
+        margin-top: 8px;
+    }
+
+    &:hover {
+        .member-icon {
+                background-color: $background_icon_hover_color;
+        }
+    }
+}
+.modal__member-group.active {
+    .members-list {
+        display: block;
+    }
+
+    .group-title-wrapper {
+        margin-bottom: 12px;
+    }
+
+    .member-icon {
+        transform: rotate(90deg);
+    }
+}
+
+.member-icon {
+    font-size: 2rem;
+    color: #666;
+    margin-right: 12px;
+    border-radius: 50%;
+    transition: all .3s ease-out;
+}
+
+.members-list {
+    display: none;
+    padding: 4px 0px 4px 36px;
+
+    .members-item {
+
+        input[type="checkbox"] {
+            margin-right: 24px;
+        }
+
+        + .members-item {
+            margin-top: 16px;
+        }
+    }
+}
+ 
+.info-1 {
+    width: 180px;
+    font-size: 1.8rem;
+    color: #999;
+    font-weight: 500; 
+    text-align: left;
+}
+.info-2 {
+    width: 100px;
+    font-size: 1.8rem;
+    color: #999;
+    font-weight: 500; 
+    text-align: center;
+}
+.info-3 {
+    width: 160px;
+    font-size: 1.8rem;
+    color: #999;
+    font-weight: 500; 
+    text-align: center;
 }
 
 .modal-footer {
@@ -191,3 +292,11 @@ $i: 0;
       background-color: $color;
     }
   }
+
+.active-block {
+    display: block;
+}
+
+.active-hidden {
+    display: none;
+}
