@@ -5,6 +5,51 @@ const $$ = document.querySelectorAll.bind(document);
 
 const modalContent = $('.modal-container');
 const data = {};
+let array_1 = ``, array_2 = ``, array_3 = ``;
+
+members.map((member) => {
+    switch (member.department) {
+        case 'Ban giám đốc' : {
+            array_1 = array_1.concat(`
+                <li class="members-item flex-center-y">
+                    <input type="checkbox" value="${member.id}">
+                    <div class="member-info grid flex-center-y">
+                        <p class="info-1">${member.fullname}</p>
+                        <p class="info-2">AnhNV</p>
+                        <p class="info-3">${member.office}</p>
+                    </div>
+                </li>
+            `);
+            break;
+        }
+        case 'Hành chính nhân sự' : {
+            array_2 = array_2.concat(`
+                <li class="members-item flex-center-y">
+                    <input type="checkbox" value="${member.id}">
+                    <div class="member-info grid flex-center-y">
+                        <p class="info-1">${member.fullname}</p>
+                        <p class="info-2">AnhNV</p>
+                        <p class="info-3">${member.office}</p>
+                    </div>
+                </li>
+            `);
+            break;
+        }
+        case 'Kế toán' : {
+            array_3 = array_3.concat(`
+                <li class="members-item flex-center-y">
+                    <input type="checkbox" value="${member.id}">
+                    <div class="member-info grid flex-center-y">
+                        <p class="info-1">${member.fullname}</p>
+                        <p class="info-2">AnhNV</p>
+                        <p class="info-3">${member.office}</p>
+                    </div>
+                </li>
+            `);
+            break;
+        }
+    }
+})
 
 function addElementIntoModal( type ) {
     if ( type === 'addLabel') {
@@ -55,22 +100,7 @@ function addElementIntoModal( type ) {
                         Ban Giám đốc
                     </div>
                     <ul class="members-list">
-                        <li class="members-item flex-center-y">
-                            <input type="checkbox">
-                            <div class="member-info grid flex-center-y">
-                                <p class="info-1">Nguyễn Vân Anh</p>
-                                <p class="info-2">AnhNV</p>
-                                <p class="info-3">Trưởng phòng</p>
-                            </div>
-                        </li>
-                        <li class="members-item flex-center-y">
-                            <input type="checkbox">
-                            <div class="member-info grid flex-center-y">
-                                <p class="info-1">Nguyễn Vân Hoàngg</p>
-                                <p class="info-2">AnhNV</p>
-                                <p class="info-3">Trưởng phòng</p>
-                            </div>
-                        </li>
+                        ${array_1}
                     </ul>
                 </div>
                 <div class="modal__member-group">
@@ -81,22 +111,7 @@ function addElementIntoModal( type ) {
                         Hành chính nhân sự
                     </div>
                     <ul class="members-list">
-                        <li class="members-item flex-center-y">
-                            <input type="checkbox">
-                            <div class="member-info grid flex-center-y">
-                                <p class="info-1">Nguyễn Vân Anh</p>
-                                <p class="info-2">AnhNV</p>
-                                <p class="info-3">Trưởng phòng</p>
-                            </div>
-                        </li>
-                        <li class="members-item flex-center-y">
-                            <input type="checkbox">
-                            <div class="member-info grid flex-center-y">
-                                <p class="info-1">Nguyễn Vân Hoàngg</p>
-                                <p class="info-2">AnhNV</p>
-                                <p class="info-3">Trưởng phòng</p>
-                            </div>
-                        </li>
+                        ${array_2}
                     </ul>
                 </div>
                 <div class="modal__member-group active">
@@ -107,22 +122,7 @@ function addElementIntoModal( type ) {
                         Kế toán
                     </div>
                     <ul class="members-list">
-                        <li class="members-item flex-center-y">
-                            <input type="checkbox">
-                            <div class="member-info grid flex-center-y">
-                                <p class="info-1">Nguyễn Vân Anh</p>
-                                <p class="info-2">AnhNV</p>
-                                <p class="info-3">Trưởng phòng</p>
-                            </div>
-                        </li>
-                        <li class="members-item flex-center-y">
-                            <input type="checkbox">
-                            <div class="member-info grid flex-center-y">
-                                <p class="info-1">Nguyễn Vân Hoàngg</p>
-                                <p class="info-2">AnhNV</p>
-                                <p class="info-3">Trưởng phòng</p>
-                            </div>
-                        </li>
+                        ${array_3}
                     </ul>
                 </div>
             </div>

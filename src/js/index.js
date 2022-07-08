@@ -1,5 +1,5 @@
 import addElementIntoModal from "./modal.js";
-import Add from "./AddFromModal.js";
+import Render, { Add, Delete } from "./AddFromModal.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -133,11 +133,12 @@ const page = {
             }
         })
         labelList.addEventListener('click', function (e) {
-            if (e.target.closest('.label__more-icon')) {
+            if (e.target.closest('.label__more-wrapper')) {
+                console.log(e.target.closest('.test-label'))
                 $('.dropdown__label-wrapper').classList.toggle('active-block');
-                $('.dropdown__label-wrapper').addEventListener('click', function (e) {
-                    e.stopPropagation();
-                });
+                // $('.dropdown__label-wrapper').addEventListener('click', function (e) {
+                //     e.stopPropagation();
+                // });
                 window.onclick = function (e) {
                     if (!e.target.matches('.label__more-icon')) {
                         const dropdownContain = $(".dropdown__label-wrapper");
@@ -147,10 +148,14 @@ const page = {
                     }
                 }
             }
+            $('.label__remove').addEventListener('click', function (e) {
+                Delete(e.target.closest('.label-item').dataset.index);
+            })
         })
     },
 
     start: function () {
+        Render();
         this.handleEvent();
 
         this.handleFuncTable(stars);

@@ -394,6 +394,41 @@ input[type="checkbox"]:focus, input[type="checkbox"]:hover {
   height: 24px;
 }
 
+.dropdown__label-wrapper {
+  display: none;
+  position: absolute;
+  top: 24px;
+  background-color: #fff;
+  min-width: 13rem;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 10;
+}
+
+.dropdown__label-wrapper .dropdown__list {
+  list-style: none;
+}
+
+.dropdown__label-wrapper .dropdown__list .dropdown__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.dropdown__label-wrapper .dropdown__list .dropdown__row {
+  font-size: 1.6rem;
+  padding: 6px 12px;
+  color: #83868a;
+}
+
+.dropdown__label-wrapper .dropdown__list .dropdown__row:hover {
+  background-color: #e8e7e7;
+  cursor: pointer;
+}
+
 .label__item-info {
   display: -webkit-box;
   display: -ms-flexbox;
