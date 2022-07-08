@@ -1,4 +1,4 @@
-import { colors, members } from "./Data.js";
+import { colors } from "./Data.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -10,7 +10,7 @@ let data = [
 
 ];
 
-function Render() {
+function RenderLabel() {
     let li = document.createElement('li');
 
     const htmlLabel = data.map((objectData,index) => {
@@ -44,18 +44,18 @@ function Render() {
 
 }
 
-export function Add(dataFromModal) {
+export function AddLabel(dataFromModal) {
     data = [...data, dataFromModal];
-    Render();
+    RenderLabel();
 }
 
 export function Edit(dataIndex) {
 
 }
 
-export function Delete(dataIndex) {
+export function DeleteLabel(dataIndex) {
     data.splice(dataIndex, 1);
-    Render();
+    RenderLabel();
 }
 
-export default Render;
+export default RenderLabel;
