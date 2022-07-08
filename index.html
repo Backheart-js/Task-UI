@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <div id="category">
+                <div class="category__menu">
+                    <div class="category__menu-wrap">
+                        <span class="icon material-icons category__menu-icon">
+                            menu
+                        </span>
+                    </div>
+                </div>
+                <div class="category__function">
+                    <ul class="category__function-list">
+                        <li class="category__function-item active">
+                            <div class="category__function-wrap">
+                                <span class="icon material-icons category__function-icon">
+                                    description
+                                </span>
+                            </div>
+                            <p class="category__function-tag">Tài liệu</p>
+                        </li>
+                        <li class="category__function-item">
+                            <div class="category__function-wrap">
+                                <span class="icon material-icons-sharp category__function-icon">
+                                    folder_open
+                                </span>
+                            </div>
+                            <p class="category__function-tag">Lưu trữ</p>
+                        </li>
+                        <li class="category__function-item">
+                            <div class="category__function-wrap">
+                                <span class="icon material-icons-sharp category__function-icon">
+                                    chat_bubble_outline
+                                </span>
+                            </div>
+                            <p class="category__function-tag">Chat</p>
+                        </li>
+                        <li class="category__function-item">
+                            <div class="category__function-wrap">
+                                <span class="icon material-icons-sharp">
+                                    assignment_turned_in
+                                </span>
+                            </div>
+                            <p class="category__function-tag">Công việc</p>
+                        </li>
+                        <li class="category__function-item">
+                            <div class="category__function-wrap">
+                                <span class="icon material-icons-sharp category__function-icon">
+                                    event
+                                </span>
+                            </div>
+                            <p class="category__function-tag">Lịch họp</p>
+                        </li>
+                        <li class="category__function-item">
+                            <div class="category__function-wrap">
+                                <span class="icon material-icons-sharp category__function-icon">
+                                    bar_chart
+                                </span>
+                            </div>
+                            <p class="category__function-tag">Báo cáo</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="panel">
+                <div class="panel__logo">
+                    DWorking
+                </div>
+                <div class="panel__wrapper active">
+                    <div class="panel__create">
+                        <button class="panel__create-btn btn btn-create-white">
+                            <span class="icon material-icons-sharp" style="margin-right: 12px;">
+                                edit
+                            </span>
+                            Tạo tài liệu
+                        </button>
+                    </div>
+                    <ul class="panel__options-list">
+                        <li class="panel__options-item active">
+                            <span class="icon material-icons-sharp">
+                                article
+                            </span>
+                            <p class="panel__option-tag">Tất cả tài liệu</p>
+                        </li>
+                        <li class="panel__options-item">
+                            <span class="icon material-icons-sharp">
+                                send
+                            </span>
+                            <p class="panel__option-tag">Tài liệu đã gửi</p>
+                        </li>
+                        <li class="panel__options-item">
+                            <span class="icon material-icons-sharp">
+                                star_border
+                            </span>
+                            <p class="panel__option-tag">Tài liệu quan trọng</p>
+                        </li>
+                        <li class="panel__options-item">
+                            <span class="icon material-icons-sharp">
+                                file_copy
+                            </span>
+                            <p class="panel__option-tag">Nháp</p>
+                        </li>
+                        <li class="panel__options-item">
+                            <span class="icon material-icons-sharp">
+                                check_box
+                            </span>
+                            <p class="panel__option-tag">Cần phê duyệt</p>
+                        </li>
+                    </ul>
+                    <div class="panel__label-wrapper">
+                        <div class="label__title-wrapper flex-center-y">
+                            <p class="label-text">NHÃN</p>
+                            <button title="addLabel" class="open-modal label-add-wrapper">
+                                <span title="addLabel" class="label-add-icon icon material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <ul class="label__list">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel__wrapper">
+
+                </div>
+                <div class="panel__wrapper">
+
+                </div>
+                <div class="panel__wrapper">
+
+                </div>
+                <div class="panel__wrapper">
+
+                </div>
+                <div class="panel__wrapper">
+
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div id="content" class="">
+            <div id="toolbar">
+                <div class="toolbar__search">
+                    <div class="search__icon-wrap">
+                        <span class="material-icons table__icon-wrap icon" style="height: 50%; width: 100%">
+                            search
+                        </span>
+                    </div>
+                    <span>
+                        <input type="text" class="toolbar__search-input" placeholder="Tìm kiếm">
+                    </span>
+                </div>
+                <div class="toolbar__settings">
+                    <div class="toolbar__settings-wrap">
+                        <span class="icon material-icons-sharp">
+                            help
+                        </span>
+                    </div>
+                    <div class="toolbar__settings-wrap">
+                        <span class="icon material-icons-sharp">
+                            settings
+                        </span>
+                    </div>
+                    <div class="toolbar__user">
+                        <div class="toolbar__user-wrap">
+                            <span class="icon material-icons-sharp">
+                                account_circle
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="table">
+                <div class="table table-create-doc ">
+                    <div class="table-create-header flex-center-y">
+                        <div class="back-wrapper">
+                            <span class="icon material-icons">
+                                arrow_back
+                            </span>
+                        </div>
+                        <h3 class="">Tạo tài liệu trình ký mới</h3>
+                    </div>
+                    <div class="table-create-content grid">
+                        <div class="doc-row row h-full">
+                            <div class="document-wrapper l-8 ">
+                                <div class="document w-full h-full">
+                                    <div class="document__header">
+                                        <h4 class="document__header-text">
+                                            Subject
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="document-func-wrapper l-4 h-full">
+                                <div class="document-func-member w-full">
+                                    <h4 class="func-title">
+                                        Người tham gia
+                                    </h4>
+                                    <button title="addMem" class="open-modal func__member-btn flex-center">
+                                        <span class="material-icons">
+                                            person_add_alt_1
+                                        </span>
+                                        Thêm người duyệt
+                                    </button>
+                                    <div class="member__list-wrapper">
+                                        <ul class="func__member-list">
+                                            <li class="func__member-item flex-center-y">
+                                                <span class="func__member-name">Nguyễn Vân A</span>
+                                                <span class="func__member-quantity">1</span>
+                                                <select name="" id="" class="func__member-select">
+                                                    <option value="duyet" class="func__member-option">Duyệt</option>
+                                                    <option value="ky" class="func__member-option">Ký</option>
+                                                    <option value="xem" class="func__member-option">Xem</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="document-func-desc w-full">
+                                    <h4 class="func-title">
+                                        Nội dung mô tả
+                                    </h4>
+                                    <div class="textarea-wrapper">
+                                        <textarea class="textarea-desc" name="" id="" cols="35" rows="30" placeholder="Nhập mô tả..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="document-func-file w-full">
+                                    <h4 class="func-title">
+                                        Tài liệu đính kèm
+                                    </h4>
+                                    <input type="file" id="file"  name="file" class="func__file-input">
+                                    <label class="func__file-label" for="file">
+                                        <span class="material-icons">
+                                            file_upload
+                                        </span>
+                                        Tải file lên
+                                    </label>
+                                    
+                                </div>
+                                <div class="document-func-btn w-full">
+                                    <button class="btn-close-doc">Hủy</button>
+                                    <button class="btn-save-doc">Lưu</button>
+                                    <button class="btn-create-doc">Tạo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table table-all-doc hidden">
+                    <div class="table__heading flex-center-y">
+                        <div class="table__heading--left flex-center-y">
+                            <div class="flex-center-y">
+                                <div class="table__icon-wrap flex-center-x">
+                                    <input type="checkbox" class="table__content-checkbox">
+                                </div>
+                                <div class="icon-dropdown-wrap flex-center-x">
+                                    <span class="icon-dropdown icon material-icons">
+                                        expand_more
+                                    </span>
+                                    <div class="dropdown__wrapper dropdown-checkbox">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__row">Tất cả</li>
+                                            <li class="dropdown__row">Bỏ chọn tất cả</li>
+                                            <li class="dropdown__row">Đã xem</li>
+                                            <li class="dropdown__row">Chưa xem</li>
+                                            <li class="dropdown__row">Gắn dấu sao</li>
+                                            <li class="dropdown__row">Không gắn dấu sao</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table__icon-wrap flex" style="justify-content: start;">
+                                <span class="icon material-icons">
+                                    refresh
+                                </span>
+                            </div>
+                        </div>
+                        <div class="table__heanding--right flex-center-y">
+                            <div class="table__heading-text flex-center" style="margin-right:20px;">
+                                <span>1 - 20 trong số 120</span>
+
+                                <div class="dropdown__wrapper">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__row">Mới nhất</li>
+                                        <li class="dropdown__row">Cũ nhất</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="table__heading-page flex-center-y">
+                                <div class="table__icon-wrap flex-center">
+                                    <span class="icon material-icons flex-center">
+                                        chevron_left
+                                    </span>
+                                </div>
+                                <div class="table__icon-wrap flex-center">
+                                    <span class="icon material-icons flex-center">
+                                        navigate_next
+                                    </span>
+                                </div>
+                                <div class="more-function table__icon-wrap flex-center">
+                                    <span class="icon material-icons flex-center">
+                                        more_vert
+                                    </span>
+
+                                    <div class="dropdown__wrapper">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__title">
+                                                Hiển thị tối đa
+                                            </li>
+                                            <li class="dropdown__row line-display-wrapper">
+                                                <span class="icon material-icons check-icon">
+                                                    done
+                                                </span>
+                                                <span class="line-display-text">
+                                                    5 mục
+                                                </span>
+                                            </li>
+                                            <li class="dropdown__row line-display-wrapper">
+                                                <span class="icon material-icons check-icon">
+                                                    done
+                                                </span>
+                                                <span class="line-display-text">
+                                                    10 mục
+                                                </span>
+                                            </li>
+                                            <li class="dropdown__row line-display-wrapper active">
+                                                <span class="icon material-icons check-icon">
+                                                    done
+                                                </span>
+                                                <span class="line-display-text">
+                                                    25 mục
+                                                </span>
+                                            </li>
+                                            <li class="dropdown__row line-display-wrapper">
+                                                <span class="icon material-icons check-icon">
+                                                    done
+                                                </span>
+                                                <span class="line-display-text">
+                                                    50 mục
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__content">
+                        <div class="table__content-wrap grid">
+                            <!--  -->
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row row flex-center-y">
+                                <div class="col l-3-5 flex-center-y table__content-col1">
+                                    <div class="table__content-function flex-center-y">
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <input type="checkbox" class="table__content-checkbox">
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons star-icon">
+                                                star_outline
+                                            </span>
+                                        </div>
+                                        <div class="table__icon-wrap table__content-function-icon flex-center">
+                                            <span class="material-icons label-icon">
+                                                label
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table__content-name flex-center-y">
+                                        <span class="table__content-text">Ha Nguyen, Vui Do, Phan 3</span>
+                                    </div>
+                                </div>
+                                <div class="col l-6 flex-center-y table__content-col2">
+                                    <div class="">
+                                        <span class="table__content-text">
+                                            Phê duyệt Chương trình kinh doanh Quý IV - 2022
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col l-2-5 flex-center-y h-full">
+                                    <div class="col l-6 flex-center table__content-col3">
+                                        <span class="table__content-text">
+                                            Hoàn thành
+                                        </span>
+                                    </div>
+                                    <div class="col l-6 flex-center">
+                                        <span class="table__content-text">
+                                            10/3/2022
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="modal" class="hidden">
+        <div class="modal-container">
+
+        </div>
+    </div>
+    <!-- <div>
+        <div class="modal__member-group">
+            <div class="group-title-wrapper">
+                <span class="material-icons">
+                    arrow_right
+                </span>
+                Ban Giám đốc
+            </div>
+            <ul class="members-list">
+
+            </ul>
+        </div>
+        <div class="modal__member-group">
+            <div class="group-title-wrapper">
+                <span class="material-icons">
+                    arrow_right
+                </span>
+                Hành chính nhân sự
+            </div>
+            <ul class="members-list">
+                <li class="members-item">
+                    <input type="checkbox">
+                    <div class="member-info">
+                        <span>Nguyễn Vân Anh</span>
+                        <span>AnhNV</span>
+                        <span>Trưởng phòng</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="modal__member-group active">
+            <div class="group-title-wrapper">
+                <span class="material-icons">
+                    arrow_right
+                </span>
+                Kế toán
+            </div>
+            <ul class="members-list">
+
+            </ul>
+        </div>
+    </div> -->
+    <script type="module" src="./src/js/index.js"></script>
+</body>
+
+</html>
