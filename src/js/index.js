@@ -1,5 +1,6 @@
 import addElementIntoModal from "./modal.js";
-import Render, { Add, Delete } from "./AddFromModal.js";
+import RenderLabel, { AddLabel, DeleteLabel } from "./HandleModalLabel.js";
+import RenderMember, { AddMember } from "./HandleModalMember.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -17,9 +18,10 @@ const openModals = $$('.open-modal');
 const modal = $('#modal');
 const modalContent = $('.modal-container');
 const labelList = $('.label__list');
-let data = {
+let dataLabel = {
     value: "",
 }
+let dataMembers = [];
 let sidebarActive = true;
 let colorIsActive = false;
 
@@ -117,15 +119,18 @@ const page = {
                 _this.closeModal();
             }
             else if (e.target.closest('.add-btn')) {
-                let value = $('.label-input').value;
-                let idColor = $('.color-choose.color-active').getAttribute('id-color') || "";
-                let idMember = $('.color-choose.color-activ') || "";
-                data = {
+                let value = $('.label-input') !== null ? $('.label-input').value : "";
+                let idColor = $('.color-choose.color-active') !== null ? $('.color-choose.color-active').getAttribute('id-color') : "";
+                dataLabel = {
                     value,
-                    idColor,
-                    idMember
+                    idColor
                 }
-                Add(data);
+
+                const idMembersNodeList = $('.member-checkbox') !== null ? $$('.member-checkbox:checked')  : "";
+                const idMembers = Array.from(idMembersNodeList)
+                let idMember = idMembers.map(id => id.value);
+
+                value !== "" ? AddLabel(dataLabel) : AddMember(idMember);
                 $('.label-input').value = "";
             }
             else if (e.target.closest('.group-title-wrapper')) {
@@ -149,13 +154,13 @@ const page = {
                 }
             }
             $('.label__remove').addEventListener('click', function (e) {
-                Delete(e.target.closest('.label-item').dataset.index);
+                Delete(e.target.closest('.label-item').dataLabelset.index);
             })
         })
     },
 
     start: function () {
-        Render();
+        RenderLabel();
         this.handleEvent();
 
         this.handleFuncTable(stars);
